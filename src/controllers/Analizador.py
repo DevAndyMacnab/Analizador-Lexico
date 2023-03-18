@@ -3,14 +3,17 @@ from controllers.abstract import Expression
 from controllers.Numero import Numero
 from controllers.Lexema import Lexema
 from controllers.Aritmetica import Aritmetica
+from Errors.Errors import ErrorFile
 reserved=['Operacion','Valor1','Valor2','Suma','Resta','Multiplicacion','Division','Potencia','Raiz','Inverso','Seno','Coseno','Tangente','Modulo','Texto'
-          ,'Color-Fondo-Nodo','Color-Fuente-Nodo','Forma-Nodo',',','.',':','[',']','{','}',]
+          ,'Color-Fondo-Nodo','Color-Fuente-Nodo','Forma-Nodo',',','.',':','[',']','{','}'," ","\n" ]
 
 lexemas=reserved
 global nLinea
 global nColumna
 global instrucciones
 global listaLexemas
+global listaErrores
+listaErrores=[]
 instrucciones=[]
 listaLexemas=[]
 nLinea=0
@@ -51,8 +54,7 @@ def Instruccion (cadena):
                 listaLexemas.append(n)
                 nColumna+=len(str(token))+1
                 puntero=0 
-        
-                
+                     
         elif char=='[' or char==']':
             #Aqui armo mi lexema de clase
             c=Lexema(char,nLinea,nColumna)
@@ -71,16 +73,18 @@ def Instruccion (cadena):
             nLinea+=1
             nColumna=1
         else:
+            print(char)
+            if char not in reserved:
+                error=Lexema(char,nLinea,nColumna)
+                listaErrores.append(error)
+                
             cadena=cadena[1:]
             puntero=0
             nColumna+=1
-            
+    
+    ErrorFile(listaErrores)        
     return listaLexemas
-            
-        
-                
-                
-
+                           
 def buildLexeme(cadena):
     global nLinea
     global nColumna
@@ -112,8 +116,7 @@ def ArmarNumero(cadena):
         else:
             numero += char
     return None, None 
-            
-                      
+                                
 def operar():
     global listaLexemas
     global instrucciones
@@ -127,14 +130,12 @@ def operar():
         
         if lexema.operar(None)=="Operacion":
             operacion=listaLexemas.pop(0)
-            
-            
+                    
         elif lexema.operar(None)=="Valor1":
             n1=listaLexemas.pop(0)
             if n1.operar(None)=='[':
                 n1=operar()
-                
-                
+           
         elif lexema.operar(None)=="Valor2":
             n2=listaLexemas.pop(0)
             if n2.operar(None)=='[':
@@ -148,8 +149,6 @@ def operar():
             return (Trigonometricas(n1,operacion,f'Inicio:{operacion.getFila()}:{operacion.getColumna()}',f'Fin:{n1.getFila()}:{n1.getColumna()}'))
     return None
 
-
-
 def operar_():
     global instrucciones
     instrucciones=[]
@@ -162,34 +161,3 @@ def operar_():
         
     
     return instrucciones
-
-entrada='''{ 
-    {   
-       "Operacion":"Suma" 
-        "Valor1":4.5 
-        "Valor2":5.32 
-   }, 
-    { 
-    "Operacion":"Resta" 
-     "Valor1":4.5 
-     "Valor2": [ 
-          "Operacion":"Potencia" 
-          "Valor1":10 
-          "Valor2":3 
-    ]}, 
-    { 
-    "Operacion":"Suma" 
-     "Valor1":[ 
-          "Operacion":"Seno" 
-          "Valor1":90 
-    ] 
-     "Valor2":5.32 
-    } 
- 
-    "Texto":"Realizacion de Operaciones" 
-    "Color-Fondo-Nodo":"Amarillo" 
-    "Color-Fuente-Nodo":"Rojo" 
-    "Forma-Nodo":"Circulo" 
- 
-} 
-'''

@@ -1,0 +1,25 @@
+{{
+        "No.":1
+        "Descripcion-Token":
+        {
+            "Lexema":!
+            "Tipo":Error
+            "Columna":2
+            "Fila":0
+        }},{
+        "No.":2
+        "Descripcion-Token":
+        {
+            "Lexema":!
+            "Tipo":Error
+            "Columna":7
+            "Fila":42
+        }},{
+        "No.":3
+        "Descripcion-Token":
+        {
+            "Lexema":¿
+            "Tipo":Error
+            "Columna":3
+            "Fila":49
+        }},}

@@ -1,4 +1,4 @@
-{ 
+{ !
     {   
        "Operacion":"Suma" 
         "Valor1":4.5 
@@ -40,11 +40,11 @@
           "Valor1":90 
     ] 
      "Valor2":5.32 
-    } 
+    } !
  
     "Texto":"Realizacion de Operaciones" 
     "Color-Fondo-Nodo":"Amarillo" 
     "Color-Fuente-Nodo":"Rojo" 
     "Forma-Nodo":"Circulo" 
  
-} 
+} ¿

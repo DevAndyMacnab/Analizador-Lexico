@@ -1,8 +1,6 @@
 import graphviz
 
-
 def GraficandoDatos(texto, colorFondo, colorFuente, forma, nodos, respuestas):
-    
     spanishColors={
         "Negro":"black", "Rojo":"red","Amarillo":"yellow","Verde":"green","Naranja":"orange","Morado":"purple","Blanco":"white"
         ,"Cafe":"brown","Azul":"blue","Gris":"gray","Rosado":"pink","Cian":"cian","Corinto":"maroon"
@@ -11,20 +9,18 @@ def GraficandoDatos(texto, colorFondo, colorFuente, forma, nodos, respuestas):
         "Cuadrado":"square","Circulo":"circle","Triangulo":"triangle","Trapezoide":"trapezoid","Estrella":"star","Rectangulo":"rectangle"
         ,"Octagono":"octagon","Corazon":"heart","Diamante":"diamond","Rombo":"rhombus","Hexagono":"hexagon","Elipse":"ellipse"
     }
-    
-    
+        
     global operacion
     listaNodos = []
+    
     d = graphviz.Digraph(filename="RESULTADOS_202111490.gv")
     with d.subgraph(name="cluster_0")as s:
         #Estilos para nuestro grafico
         s.attr(label=f"{texto}")
-        s.attr(rank="same")
-        
+        s.attr(rank="same")    
         fondoColor=spanishColors.get(colorFondo,"black")
         fuenteColor=spanishColors.get(colorFuente,"white")
         setFigure=spanishFigures.get(forma,"circle")
-        
         s.attr("node", shape=f"{setFigure}", style="filled",
                fillcolor=f"{fondoColor}", fontcolor=f"{fuenteColor}")
         

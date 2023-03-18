@@ -10,6 +10,7 @@ import webbrowser as web
 import os
 from controllers.Analizador import Instruccion,operar_
 from Graphviz.Graphviz import GraficandoDatos
+import json
 
 class Principal:
     def __init__(self,window):
@@ -74,6 +75,7 @@ class Principal:
         self.botonAnalizar.grid(row=2,column=0,padx=20,pady=10)
         
         self.botonErrores=Button(self.frameFunciones,text="Errores",
+                                 command=lambda:self.abrirArchivoErrores(),
                                  width=16,
                                  height=4)
         self.botonErrores.grid(row=3,column=0,padx=20,pady=10)
@@ -110,26 +112,18 @@ class Principal:
             if palabraClave=="Texto":
                 texto=listadoLexemas.pop(0)
             elif palabraClave=="Color-Fondo-Nodo":
-                colorFondo=listadoLexemas.pop(0)
-                
+                colorFondo=listadoLexemas.pop(0)   
             elif palabraClave=="Color-Fuente-Nodo":
-                colorFuente=listadoLexemas.pop(0)
-                
+                colorFuente=listadoLexemas.pop(0)   
             elif palabraClave=="Forma-Nodo":
                 formaNodo=listadoLexemas.pop(0)
-        listToGraphic=listToGraphic[:-8]
-        print(listToGraphic)
-        print("- - - - - - - - -")
-        print(texto, colorFondo, colorFuente, formaNodo)
-        
+        listToGraphic=listToGraphic[:-8]       
         respuesta = operar_()
         
         for element in respuesta:
             #Estos son los resultados que debo de graficar de igual forma junto al nombre de la operacion
            respuestas.append(str(element.operar(None)))
-           print(element.operar(None))
            
-        
         GraficandoDatos(texto,colorFondo,colorFuente,formaNodo,listToGraphic,respuestas)
     
     def temasdeAyuda(self):
@@ -144,3 +138,8 @@ class Principal:
     def manualTecnico(self):
         web.open_new("file:///C:/Users/andyr/Desktop/PROGRA%20PARA%20USAC/Programa%20de%20Automata%20Finito/MANUAL%20TECNICO.pdf")
         messagebox.showinfo("Manual de Tecnico", "El documento PDF del manual técnico ha sido abierto correctamente")
+        
+    def abrirArchivoErrores(self):
+        web.open_new("static\ERRORES_202111490.json")
+            
+        
