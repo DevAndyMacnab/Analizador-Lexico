@@ -2,50 +2,78 @@ digraph {
 	subgraph cluster_0 {
 		label="Realizacion de Operaciones"
 		rank=same
-		node [fillcolor=Amarillo fontcolor=white shape=Circulo style=filled]
-		"1 Suma 
- 9.82" -> "value 2)
+		node [fillcolor=yellow fontcolor=red shape=circle style=filled]
+		"ID -> 1
+Suma 
+ 9.82" -> "ID -> 2
 4.5"
-		"1 Suma 
- 9.82" -> "value 3)
+		"ID -> 1
+Suma 
+ 9.82" -> "ID -> 3
 5.32"
-		"4 Resta 
- -995.5" -> "value 5)
+		"ID -> 4
+Resta 
+ -5.5" -> "ID -> 5
 4.5"
-		"4 Resta 
- -995.5" -> "6 Potencia"
-		"6 Potencia" -> "value 7)
+		"ID -> 4
+Resta 
+ -5.5" -> "ID ->6
+ Potencia"
+		"ID ->6
+ Potencia" -> "ID -> 7
 10"
-		"6 Potencia" -> "value 8)
+		"ID ->6
+ Potencia" -> "ID ->8
+ Potencia"
+		"ID ->8
+ Potencia" -> "ID -> 9
+1"
+		"ID ->8
+ Potencia" -> "ID -> 10
 3"
-		"9 Suma 
- 6.213996663600558" -> "10 Seno"
-		"10 Seno" -> "value 11)
+		"ID -> 11
+Suma 
+ 6.213996663600558" -> "ID -> 12
+Seno"
+		"ID -> 12
+Seno" -> "ID -> 13
 90"
-		"9 Suma 
- 6.213996663600558" -> "value 12)
+		"ID -> 11
+Suma 
+ 6.213996663600558" -> "ID -> 14
 5.32"
-		"13 Suma 
- 9.82" -> "value 14)
+		"ID -> 15
+Suma 
+ 9.82" -> "ID -> 16
 4.5"
-		"13 Suma 
- 9.82" -> "value 15)
+		"ID -> 15
+Suma 
+ 9.82" -> "ID -> 17
 5.32"
-		"16 Resta 
- -995.5" -> "value 17)
+		"ID -> 18
+Resta 
+ -995.5" -> "ID -> 19
 4.5"
-		"16 Resta 
- -995.5" -> "18 Potencia"
-		"18 Potencia" -> "value 19)
+		"ID -> 18
+Resta 
+ -995.5" -> "ID ->20
+ Potencia"
+		"ID ->20
+ Potencia" -> "ID -> 21
 10"
-		"18 Potencia" -> "value 20)
+		"ID ->20
+ Potencia" -> "ID -> 22
 3"
-		"21 Suma 
- 6.213996663600558" -> "22 Seno"
-		"22 Seno" -> "value 23)
+		"ID -> 23
+Suma 
+ 6.213996663600558" -> "ID -> 24
+Seno"
+		"ID -> 24
+Seno" -> "ID -> 25
 90"
-		"21 Suma 
- 6.213996663600558" -> "value 24)
+		"ID -> 23
+Suma 
+ 6.213996663600558" -> "ID -> 26
 5.32"
 	}
 }
