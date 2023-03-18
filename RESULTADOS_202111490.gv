@@ -1,0 +1,51 @@
+digraph {
+	subgraph cluster_0 {
+		label="Realizacion de Operaciones"
+		rank=same
+		node [fillcolor=Amarillo fontcolor=white shape=Circulo style=filled]
+		"1 Suma 
+ 9.82" -> "value 2)
+4.5"
+		"1 Suma 
+ 9.82" -> "value 3)
+5.32"
+		"4 Resta 
+ -995.5" -> "value 5)
+4.5"
+		"4 Resta 
+ -995.5" -> "6 Potencia"
+		"6 Potencia" -> "value 7)
+10"
+		"6 Potencia" -> "value 8)
+3"
+		"9 Suma 
+ 6.213996663600558" -> "10 Seno"
+		"10 Seno" -> "value 11)
+90"
+		"9 Suma 
+ 6.213996663600558" -> "value 12)
+5.32"
+		"13 Suma 
+ 9.82" -> "value 14)
+4.5"
+		"13 Suma 
+ 9.82" -> "value 15)
+5.32"
+		"16 Resta 
+ -995.5" -> "value 17)
+4.5"
+		"16 Resta 
+ -995.5" -> "18 Potencia"
+		"18 Potencia" -> "value 19)
+10"
+		"18 Potencia" -> "value 20)
+3"
+		"21 Suma 
+ 6.213996663600558" -> "22 Seno"
+		"22 Seno" -> "value 23)
+90"
+		"21 Suma 
+ 6.213996663600558" -> "value 24)
+5.32"
+	}
+}
