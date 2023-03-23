@@ -7,9 +7,6 @@ def ErrorFile(listaErrores):
     archivo.write("")
     #Aca generamos el archivo JSON con los errores del archivo ingresado por el usuario
     for element in listaErrores:
-        print(element.lexema)
-        print("Esta es la fila ",element.fila)
-        print("Esta es la columna ", element.columna)
         texto+="{"
         texto+=f'''
         "No.":{contador}
@@ -18,7 +15,7 @@ def ErrorFile(listaErrores):
         texto+="{"
         texto+=f'''
             "Lexema":{element.lexema}
-            "Tipo":Error
+            "Tipo":Error Léxico
             "Columna":{element.columna}
             "Fila":{element.fila}
         '''
@@ -29,13 +26,7 @@ def ErrorFile(listaErrores):
     contador=0
     listaErrores=[]
     archivo.write(texto)
-    archivo.close
-    print(texto)
-        
-        
-        
-        
-                
+    archivo.close           
     pass
 
 

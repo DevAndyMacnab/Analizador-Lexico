@@ -15,7 +15,7 @@ import json
 class Principal:
     def __init__(self,window):
         self.principal= window
-        self.principal.title("Automata Finito")
+        self.principal.title("Analizador Léxico")
 
         
         self.frameFunciones= Frame(self.principal)
@@ -132,11 +132,11 @@ class Principal:
     
         
     def manualUsuario(self):
-        web.open_new("file:///C:/Users/andyr/Desktop/PROGRA%20PARA%20USAC/Programa%20de%20Automata%20Finito/MANUAL%20DE%20USUARIO.pdf")
+        web.open_new("static\Manual de usuario.pdf")
         messagebox.showinfo("Manual de Usuario", "El documento PDF del manual de usuario ha sido abierto correctamente")
         
     def manualTecnico(self):
-        web.open_new("file:///C:/Users/andyr/Desktop/PROGRA%20PARA%20USAC/Programa%20de%20Automata%20Finito/MANUAL%20TECNICO.pdf")
+        web.open_new("static\Manual Tecnico.pdf")
         messagebox.showinfo("Manual de Tecnico", "El documento PDF del manual técnico ha sido abierto correctamente")
         
     def abrirArchivoErrores(self):

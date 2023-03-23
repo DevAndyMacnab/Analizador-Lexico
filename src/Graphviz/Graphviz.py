@@ -94,8 +94,3 @@ def GraficandoDatos(texto, colorFondo, colorFuente, forma, nodos, respuestas):
                                           
     s.attr(label=f"{texto}")
     d.view()
-
-lista = ['Operacion', 'Suma', 'Valor1', 4.5, 'Valor2', 5.32, 'Operacion', 'Resta', 'Valor1', 4.5, 'Valor2', '[', 'Operacion',
-         'Potencia', 'Valor1', 10, 'Valor2', 3, ']', 'Operacion', 'Suma', 'Valor1', '[', 'Operacion', 'Seno', 'Valor1', 90, ']', 'Valor2', 5.32]
-respuestas = ["respuesta1", "respuesta2", "respuesta3","respuesta4","respuesta5"]
-#GraficandoDatos("Texto de prueba", "Corinto", "asjdha", "Diamante", lista, respuestas)

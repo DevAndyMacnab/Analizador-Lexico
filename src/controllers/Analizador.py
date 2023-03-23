@@ -73,9 +73,8 @@ def Instruccion (cadena):
             nLinea+=1
             nColumna=1
         else:
-            print(char)
             if char not in reserved:
-                error=Lexema(char,nLinea,nColumna)
+                error=Lexema(char,nLinea+1,nColumna)
                 listaErrores.append(error)
                 
             cadena=cadena[1:]
@@ -161,3 +160,4 @@ def operar_():
         
     
     return instrucciones
+
