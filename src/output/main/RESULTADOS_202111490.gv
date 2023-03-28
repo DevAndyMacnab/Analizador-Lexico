@@ -1,0 +1,88 @@
+digraph {
+	subgraph cluster_0 {
+		label="Realizacion de Operaciones"
+		rank=same
+		node [fillcolor=yellow fontcolor=red shape=circle style=filled]
+		"ID -> 1
+Resta 
+ 3.0" -> "ID -> 2
+6.5"
+		"ID -> 1
+Resta 
+ 3.0" -> "ID -> 3
+3.5"
+		"ID -> 4
+Multiplicacion 
+ 64.0" -> "ID -> 5
+Potencia"
+		"ID -> 5
+Potencia" -> "ID -> 6
+2"
+		"ID -> 5
+Potencia" -> "ID ->7
+ Raiz"
+		"ID ->7
+ Raiz" -> "ID -> 8
+9"
+		"ID ->7
+ Raiz" -> "ID -> 9
+2"
+		"ID -> 8
+9" -> "ID ->10
+ Potencia"
+		"ID ->10
+ Potencia" -> "ID -> 11
+2"
+		"ID ->10
+ Potencia" -> "ID ->12
+ Raiz"
+		"ID ->12
+ Raiz" -> "ID -> 13
+9"
+		"ID ->12
+ Raiz" -> "ID -> 14
+2"
+		"ID -> 15
+Suma 
+ 6.213996663600558" -> "ID -> 16
+Seno"
+		"ID -> 16
+Seno" -> "ID -> 17
+90"
+		"ID -> 15
+Suma 
+ 6.213996663600558" -> "ID -> 18
+5.32"
+		"ID -> 19
+Resta 
+ 100.0" -> "ID -> 20
+Division"
+		"ID -> 20
+Division" -> "ID -> 21
+500"
+		"ID -> 20
+Division" -> "ID ->22
+ Division"
+		"ID ->22
+ Division" -> "ID -> 23
+10"
+		"ID ->22
+ Division" -> "ID -> 24
+5"
+		"ID -> 23
+10" -> "ID ->25
+ Multiplicacion"
+		"ID ->25
+ Multiplicacion" -> "ID -> 26
+10"
+		"ID ->25
+ Multiplicacion" -> "ID ->27
+ Multiplicacion"
+		"ID ->27
+ Multiplicacion" -> "ID -> 28
+3"
+		"ID ->27
+ Multiplicacion" -> "ID -> 29
+5"
+	}
+}
